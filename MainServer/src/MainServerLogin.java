@@ -11,12 +11,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -25,9 +23,7 @@ import javax.swing.SwingUtilities;
 
 public class MainServerLogin extends JPanel {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	
 	private JTextField name;
@@ -38,6 +34,7 @@ public class MainServerLogin extends JPanel {
 	private JPanel cardContainerPanel;
 	private CardLayout cards;
 	private int SERVER_PORT;
+
 	
 	public MainServerLogin(String port,JFrame frame,JPanel panel,CardLayout cardLayout) {
 
@@ -45,18 +42,13 @@ public class MainServerLogin extends JPanel {
 		this.cardContainerPanel = panel;
 		this.cards = cardLayout;
 		this.SERVER_PORT = Integer.parseInt(port);
-		
-		if(!new CheckMainServer(SERVER_PORT).Ok()){
-			JOptionPane.showMessageDialog(null, "Unable to start server with port " + port );
-		}
-		
+
 		initComponent();
 
 	}
 
 
 	private void initComponent() {
-
 		
 		JPanel Headerpanel = new JPanel();
 		Headerpanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 0, 0));

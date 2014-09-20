@@ -2,14 +2,8 @@ import java.awt.Dimension;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-
-import TabbedPaneCustomised.CWTabbedPaneUI;
-import TabbedPaneCustomised.CustomTabbedPaneUI;
-import TabbedPaneCustomised.PPTTabbedPaneUI;
-
 
 public class MainServerPanel extends JPanel {
 
@@ -36,7 +30,6 @@ public class MainServerPanel extends JPanel {
 	private void initComponent() {
 		
 		mainTabs = new JTabbedPane();
-		mainTabs.setUI(new PPTTabbedPaneUI());
 		
 		initServerTab();
 		
